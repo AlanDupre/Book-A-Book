@@ -1,0 +1,18 @@
+<div class="container text-align-center">
+<h1>TIME TO BOOK ! CHOOSE YOUR DATE</h1>
+  <div>
+    <%= @book.title %>
+  </div>
+
+  <div>
+    <%= @book.author %>
+  </div>
+
+
+<%= simple_form_for [@book, @transaction] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit "Submit Transaction", class: "btn btn-primary" %>
+<% end %>
+
+</div>
