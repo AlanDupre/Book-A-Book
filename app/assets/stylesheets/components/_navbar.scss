@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  font-family: 'Staatliches', cursive;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,7 +15,11 @@ img {
   height: auto;
 }
 
-.navbar-brand {
+.company_name {
   font-family: 'Staatliches', cursive;
-  padding: 17px;
+  font-size: large;
+}
+
+.container-fluid {
+  height: 25px;
 }
