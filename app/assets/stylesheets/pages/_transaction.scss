@@ -3,4 +3,15 @@
 .transactions {
   display: flex;
   justify-content: space-around;
+  padding: 15px;
+
+}
+
+.max-width {
+  max-width: 1000px;
+}
+
+.transaction-card {
+  max-width: 250px;
+  max-height: 250px;
 }

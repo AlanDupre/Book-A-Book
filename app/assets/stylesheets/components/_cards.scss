@@ -39,6 +39,7 @@ $orange: #ec992c;
 *{
   margin: 0;
   padding: 0;
+  text-decoration: none;
   
   font-family: $font;
 }
@@ -46,6 +47,7 @@ $orange: #ec992c;
 h2{
   color: #0a4870;
   font-weight: 500;
+  text-decoration: none;
 }
 
 ul{
@@ -61,6 +63,7 @@ ul{
     display: flex;
     flex: 0 0 300px;
     flex-direction: column;
+    text-decoration: none;
   
     margin: 20px;
     margin-bottom: 30px;
@@ -70,6 +73,7 @@ ul{
     
     background-position: center center;
     background-size: cover;
+    text-decoration: none;
     
     text-align: center;
     color: $blue;
@@ -83,6 +87,7 @@ ul{
       left: 0;
       right: 0;
       bottom: 0;
+      text-decoration: none;
       
       background: rgba(10,72,112, 0);
       
@@ -99,6 +104,7 @@ ul{
         justify-content: center;
         height: 100%;
         width: 100%;
+        text-decoration: none;
         
         transform: translateY(-200px);
         
@@ -114,6 +120,7 @@ ul{
           font-weight: bold;
           font-size: 1.3em;
           color: white;
+          text-decoration: none;
           
           cursor: pointer;
           
@@ -125,6 +132,7 @@ ul{
             border: 0px solid white;
             
             color: $blue;
+            text-decoration: none;
           }
         }
       }
@@ -140,6 +148,7 @@ ul{
       transform: translateY(206px);
       
       transition: .3s;
+      text-decoration: none;
       
       .title {
         position: relative;
@@ -149,6 +158,7 @@ ul{
         
         font-weight: bold;
         font-size: 1.2em;
+        text-decoration: none;
         
         &::after{
           content: '';
@@ -164,6 +174,7 @@ ul{
           margin: auto;
           
           background: $blue;
+          text-decoration: none;
         }
       }
       
@@ -171,6 +182,7 @@ ul{
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
         
         margin-top: 10px;
         
@@ -197,6 +209,7 @@ ul{
 
             font-weight: bold;
             font-size: 0.9em;
+            text-decoration: none;
 
             .icon {
               margin-bottom: 5px;
@@ -206,6 +219,7 @@ ul{
               color: $orange;
 
               margin-right: 10px;
+              text-decoration: none;
             }
           }
         }
@@ -214,6 +228,7 @@ ul{
 
           font-size: 0.8em;
           color: $grey;
+          text-decoration: none;
         }
       }
     }
@@ -237,6 +252,7 @@ ul{
   background: $blue;
   color: white;
   line-height: 25px;
+  text-decoration: none;
   
   margin: 10px auto;
   padding: 20px;
@@ -247,9 +263,11 @@ ul{
   
   a{
     color: $blue2;
+    text-decoration: none;
   }
 }
 
 h1{
   margin: 10px 20px;
+  text-decoration: none;
 }

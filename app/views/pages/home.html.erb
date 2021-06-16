@@ -12,7 +12,7 @@
 </div>
 
 
-<h2> <%= link_to "DISCOVER OUR BOOKS", books_path %> </h2>
+<h2 class="title-home-page"> <%= link_to "DISCOVER OUR BOOKS", books_path, class: "btn btn-light" %> </h2>
 
 
 <%= render "/shared/book_card", books: @books %>
