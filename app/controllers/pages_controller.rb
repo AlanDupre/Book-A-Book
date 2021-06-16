@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @books = Book.all.first(4)
+    @books = Book.all.last(4)
   end
-
 end
