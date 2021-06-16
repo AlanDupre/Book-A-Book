@@ -1,20 +1,31 @@
-<div class="transactions">
-<h1>TIME TO BOOK ! CHOOSE YOUR DATE</h1>
-  <div>
-    <%= @book.title %>
-  </div>
-  <div>
-    <img  src="<%= @book.poster_url %>" class="transaction-image" alt="">
-  </div>
-  <div>
-    <%= @book.author %>
-  </div>
+<div class="container">
+      <div class="transactions">
+        <div>
+            <div class="card mb-3" style="max-width: 1000px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src=" <%= @book.poster_url %> "> 
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h2 class="card-title"><%= @book.title %></h2>
+                    <h3>Author : <%= @book.author %></h3>
+                    <p class="card-text"><%= @book.description %></p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
 
-<div class="transaction-form">
-<%= simple_form_for [@book, @transaction] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Submit Transaction", class: "btn btn-primary" %>
-<% end %>
-</div>
+        
+
+          <div class="transaction-form">
+            <%= simple_form_for [@book, @transaction] do |f| %>
+              <%= f.input :start_date %>
+              <%= f.input :end_date %>
+              <%= f.submit "Submit Transaction", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+      </div>
 </div>
