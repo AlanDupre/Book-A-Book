@@ -1,5 +1,6 @@
 <h1>Création de votre livre</h1>
 <h2>Veuillez renseigner ce formulaire</h2>
+
 <%= simple_form_for @book do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
@@ -12,8 +13,10 @@
   <%= f.label :poster_url %>
   <%= f.text_field :poster_url %>
   <%= f.submit %>
+
 <% end %>
-<%= console %>
+
 
   <%= link_to "Back to the Books", books_path, class: "btn btn-info" %>
+
 
