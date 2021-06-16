@@ -1,5 +1,22 @@
-<h2><%=@book.title %></h2>
-<p><%= @book.description %></p>
-<p><%= @book.author %></p>
-<p><%= @book.isbn %></p>
-<p><%= @book.poster_url %></p>
+        
+  <div class="display">
+          <div>
+            <div class="card mb-3" style="max-width: 1000px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src=" <%= @book.poster_url %> "> 
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h2 class="card-title"><%= @book.title %></h2>
+                    <h3>Author : <%= @book.author %></h3>
+                    <p class="card-text"><%= @book.description %></p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+
+      <%= link_to "I fucking Want it", new_book_transaction_path(@book), class: "btn btn-info" %>
+  </div>
