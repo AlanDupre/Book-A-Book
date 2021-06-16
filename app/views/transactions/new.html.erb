@@ -1,18 +1,20 @@
-<div class="container text-align-center">
+<div class="transactions">
 <h1>TIME TO BOOK ! CHOOSE YOUR DATE</h1>
   <div>
     <%= @book.title %>
   </div>
-
+  <div>
+    <img  src="<%= @book.poster_url %>" class="transaction-image" alt="">
+  </div>
   <div>
     <%= @book.author %>
   </div>
 
-
+<div class="transaction-form">
 <%= simple_form_for [@book, @transaction] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit "Submit Transaction", class: "btn btn-primary" %>
 <% end %>
-
+</div>
 </div>
