@@ -1,273 +1,165 @@
-$font : 'Sofia', sans-serif;
-$font-size:16px;
-$blue : #0a4870;
-$blue2 : #e3ebf1;
-$black: #000;
-$grey : #7d7d7d;
-$grey2 : #f0f0f0;
-$grey3 : #e8e7e7;
-$grey4 : #fdfdfd;
-$bluegrey : #49606e;
-$orange: #ec992c;
-
-@mixin radius($val) {
-  -webkit-border-radius: $val;
-  -moz-border-radius: $val;
-  border-radius: $val;
+.index-card {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@mixin cardsOpen() {
-    &::before {
-      background: rgba(10,72,112, 0.6);
-    }
-    .book-container {
-      .content {
-        opacity: 1;
-
-        transform: translateY(0px);
-      }
-    }
-
-    .informations-container {      
-      transform: translateY(0px);
-      .more-information {
-        opacity: 1;
-      }
-    }
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
-*{
+.btn-ghost:hover {
+  opacity: 1;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  flex: 1 0 21%; /* explanation below */
+  margin: 5px;
+  height: 500px;
+  background-color: white;
+}
+
+.card-trip > img {
+  height: 400px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
   margin: 0;
-  padding: 0;
-  text-decoration: none;
-  
-  font-family: $font;
 }
 
-h2{
-  color: #0a4870;
-  font-weight: 500;
-  text-decoration: none;
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
 }
 
-ul{
-    display: flex;
-    flex-wrap: wrap;
 
-    list-style: none;
-    padding:0;
-  
-  .booking-card{
-    position: relative;
-    width: 300px;
-    display: flex;
-    flex: 0 0 300px;
-    flex-direction: column;
-    text-decoration: none;
-  
-    margin: 20px;
-    margin-bottom: 30px;
-    @include radius(10px);
-    
-    overflow: hidden;
-    
-    background-position: center center;
-    background-size: cover;
-    text-decoration: none;
-    
-    text-align: center;
-    color: $blue;
-    
-    transition: .3s;
-    
-    &::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      text-decoration: none;
-      
-      background: rgba(10,72,112, 0);
-      
-      transition: .3s;
-    }
-    
-    .book-container {
-      height: 200px;
-      .content {
-        position: relative;
-        opacity: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        text-decoration: none;
-        
-        transform: translateY(-200px);
-        
-        transition: .3s;
-        
-        .btn {      
-          border: 3px solid white;
-          padding: 10px 15px;
-          
-          background: none;
-          
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 1.3em;
-          color: white;
-          text-decoration: none;
-          
-          cursor: pointer;
-          
-          transition: .3s;
-          
-          &:hover {
-            background: white;
-            
-            border: 0px solid white;
-            
-            color: $blue;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-    
-    .informations-container{      
-      flex: 1 0 auto;
-      
-      padding: 20px;
-      
-      background: $grey2;
-      
-      transform: translateY(206px);
-      
-      transition: .3s;
-      text-decoration: none;
-      
-      .title {
-        position: relative;
-        
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        
-        font-weight: bold;
-        font-size: 1.2em;
-        text-decoration: none;
-        
-        &::after{
-          content: '';
-          
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          
-          height: 3px;
-          width: 50px;
-          
-          margin: auto;
-          
-          background: $blue;
-          text-decoration: none;
-        }
-      }
-      
-      .price {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        
-        margin-top: 10px;
-        
-        .icon {
-          margin-right: 10px;
-        }
-      }
-      
-      .more-information {
-        opacity: 0;
-        
-        transition: .3s;
-        .info-and-date-container {
-          display: flex;
-
-          .box {
-            flex: 1 0;
-
-            padding: 15px;
-            margin-top: 20px;
-            @include radius(10px);
-
-            background: white;
-
-            font-weight: bold;
-            font-size: 0.9em;
-            text-decoration: none;
-
-            .icon {
-              margin-bottom: 5px;
-            }
-
-            &.info{
-              color: $orange;
-
-              margin-right: 10px;
-              text-decoration: none;
-            }
-          }
-        }
-        .disclaimer {
-          margin-top: 20px;
-
-          font-size: 0.8em;
-          color: $grey;
-          text-decoration: none;
-        }
-      }
-    }
-    
-    &:hover {
-      @include cardsOpen();
-    }
-  }
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  ul {
-    .booking-card{
-      @include cardsOpen();
-    }
-  }
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 100%;
 }
 
-.credits{
-  display: table;
-  background: $blue;
-  color: white;
-  line-height: 25px;
-  text-decoration: none;
-  
-  margin: 10px auto;
-  padding: 20px;
-  
-  @include radius(10px);
-  
-  text-align: center;
-  
-  a{
-    color: $blue2;
-    text-decoration: none;
-  }
+.infos {
+  text-align: left;
+  margin-top: -25px;
 }
 
-h1{
-  margin: 10px 20px;
-  text-decoration: none;
+// card pour la show
+.wrapper {
+  height: 420px;
+  width: 654px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 }
+
+.product-img {
+  float: left;
+  height: 420px;
+  width: 327px;
+}
+
+.product-img img {
+  border-radius: 7px 0 0 7px;
+}
+
+.product-info {
+  float: left;
+  height: 420px;
+  width: 327px;
+  border-radius: 0 7px 10px 7px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: 'Bentham', serif;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.product-text h2 {
+  margin: 0 0 47px 10px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d2d2d2;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  font-family: 'Trocchi', serif;
+  margin: 0 0 0 38px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+span {
+  display: inline-block;
+  height: 50px;
+  font-family: 'Suranna', serif;
+  font-size: 34px;
+}
+
