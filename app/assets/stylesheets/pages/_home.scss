@@ -6,6 +6,13 @@
   align-items: center;
 }
 
+h2 {
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: none;
+  color: black
+}
+
 // Barre de recherche
 .padding {
   padding: 10rem !important
@@ -61,7 +68,3 @@ body {
   justify-content: space-between;
 }
 
-h2 {
-  text-align: center;
-  padding-top: 20px;
-}
