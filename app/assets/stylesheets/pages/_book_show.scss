@@ -1,8 +1,9 @@
 .display {
   padding-top: 100px;
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: space-evenly;
-  text-decoration: none;
+}
+.card-img {
+  max-width: 250px;
 }
