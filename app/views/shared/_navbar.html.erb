@@ -1,19 +1,19 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon justify-content-between">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "BookABook.png" %>
       <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-<div> <%= link_to "Discover available Books", books_path, class: "button" %> </div>
+<div> <%= link_to "Discover available Books", books_path, class: "button-navbar" %> </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
         <%= image_tag "https://media.istockphoto.com/vectors/neutral-profile-picture-vector-id1091291084?k=6&m=1091291084&s=170667a&w=0&h=2Dx_R7emqSPjyLcvTRaPqXzbf4RP37hJf9DjUPD65lk=", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Dashboard", "#", class: "dropdown-item" %>
+          <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
           <% if user_signed_in? %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           <% else %>

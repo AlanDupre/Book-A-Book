@@ -11,11 +11,17 @@
   width: 50px;
 }
 
-.button {
+.button-navbar {
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
-  color: white;
-  background-color: #3C8DAD;
+  color: black;
+  background-color: white;
   padding: 10px;
   border-radius: 4px;
+}
+
+.button-navbar:hover {
+  text-decoration: none;
+  color: black;
+  opacity: 0.80;
 }
