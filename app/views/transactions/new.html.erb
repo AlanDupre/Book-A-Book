@@ -8,9 +8,6 @@
       <div class="product-text">
         <h1><%= @book.title %></h1> 
         <h2>Author : <%= @book.author %></h2>
-    </div>
- </div>
-      </div>
           <div class="transaction-form">
             <%= simple_form_for [@book, @transaction] do |f| %>
               <%= f.input :start_date %>
@@ -18,5 +15,6 @@
               <%= f.submit "Add", class: "btn btn-primary" %>
             <% end %>
           </div>
-      </div>
+    </div>
+ </div>
 </div>
