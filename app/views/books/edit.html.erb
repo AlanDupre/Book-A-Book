@@ -1,3 +1,4 @@
+
 <h1>Actualisation de votre livre</h1>
     <h2>Compléter ce formulaire</h2>
       <%= simple_form_for @book do |f| %>
@@ -14,3 +15,10 @@
         <%= f.submit %>
       <% end %>
   <%= link_to "Back to the Books", books_path, class: "btn btn-info" %>
+
+<div class="container text-center">
+  <h1>Actualisation de votre livre</h1>
+  <%= link_to "Back to the Books", books_path, class: "btn btn-warning" %>
+  <%= render "/shared/book_form", books: @books %>
+</div>
+
