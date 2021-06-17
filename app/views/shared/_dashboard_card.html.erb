@@ -1,0 +1,8 @@
+  <% booking.each do |book| %>
+    <div class="card-product">
+      <img src="<%= book.poster_url %>" />
+      <div class="card-product-infos">
+        <p><%= book.title %></p>
+      </div>
+    </div>
+  <% end %>
