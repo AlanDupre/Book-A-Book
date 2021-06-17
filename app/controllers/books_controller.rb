@@ -17,7 +17,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user = current_user
     @book.save
-    redirect_to book_path(@book)
+    redirect_to dashboard_path
   end
 
   def edit
