@@ -1,0 +1,13 @@
+<h1>DASHBOARD</h1>
+
+<% @booking.each do |book| %>
+
+<div class="card-product">
+  <img src="<%= book.poster_url %>" />
+  <div class="card-product-infos">
+    <h2><%= book.title %></h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+
+<% end %>

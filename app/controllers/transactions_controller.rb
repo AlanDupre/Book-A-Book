@@ -13,8 +13,11 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @transaction.book = @book
     @transaction.user = @user
-    @transaction.save
-    redirect_to books_path(@book)
+    if @transaction.save
+      redirect_to dashboard_path
+    else
+      render :new
+    end
   end
 
   def validate
