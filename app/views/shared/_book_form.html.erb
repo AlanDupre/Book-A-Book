@@ -1,11 +1,10 @@
 
   <%= simple_form_for @book do |f| %>
-  <h2>Informations</h2>
     <%# TITLE %>
     <div class="container">
     <div class="form-group row">
       <%= f.label :titre, class: "col-sm-2 col-form-label" %>
-      <div class="col-sm-10">
+      <div class="col-sm-10 width-150p">
         <%= f.text_field :title, class: "form-control" %>
       </div>
     </div>
@@ -26,7 +25,7 @@
       </div>
     </div>
 
-  <h2>Votre prix</h2>
+
   <%# Prix %>
      <div class="form-group row">
       <%= f.label :Prix, class:"col-sm-2 col-form-label" %>
@@ -35,10 +34,10 @@
       </div>
     </div>
   
-  <h2>Couverture</h2>
+
      <%= f.input :photo, as: :file %>
 
-    <%= f.submit "Ajoutez votre livre" , class:"button" %>
+    <%= f.submit "Ajoutez votre livre" , class:"btn btn-success" %>
   <% end %>
   </div>
 

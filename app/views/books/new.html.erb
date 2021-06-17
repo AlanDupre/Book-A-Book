@@ -1,5 +1,6 @@
 <div class="container text-center">
-  <h1>Création de votre livre</h1>
-  <%= link_to "Back to the Books", books_path, class: "btn btn-warning" %>
-  <%= render "/shared/book_form", books: @books %>
+  <div class="design">
+     <%= render "/shared/book_form", books: @books %>
+  </div>
+ 
 </div>
