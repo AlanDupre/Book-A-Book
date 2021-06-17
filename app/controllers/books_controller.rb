@@ -17,7 +17,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user = current_user
     @book.save
-    redirect_to book_path(@book)
+    redirect_to dashboard_path
   end
 
   def edit
@@ -38,6 +38,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :description, :author, :isbn)
+    params.require(:book).permit(:title, :description, :author, :isbn, :photo)
   end
 end

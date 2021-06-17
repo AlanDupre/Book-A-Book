@@ -2,17 +2,21 @@
 
   <div class="wrapper">
     <div class="product-img">
-      <img src="<%= @book.poster_url %>" height="420" width="327">
+       <% if @book.photo.attached? %>
+        <%= cl_image_tag @book.photo.key, crop: :fill %>
+      <% else %>
+        <img src="<%= @book.poster_url %>" />
+      <% end %>
     </div>
     <div class="product-info">
       <div class="product-text">
         <h1><%= @book.title %></h1> 
         <h2>Author : <%= @book.author %></h2>
         <p><%= @book.description %> </p>
+        <div class="access">
+        <%= link_to "Book", new_book_transaction_path(@book), class: "btn btn-secondary" %>
+      </div>
     </div>
  </div>
 
-      <div class="access">
-        <%= link_to "Book", new_book_transaction_path(@book), class: "btn btn-ghost" %>
-        <%= link_to "Edit", edit_book_path(@book), class: "btn btn-ghost" %>
-      </div>
+

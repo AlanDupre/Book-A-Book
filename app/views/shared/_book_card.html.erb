@@ -1,13 +1,17 @@
 <div class="index-card">
   <% books.each do |book| %>
         <div class="card-trip">
-        <img src="<%= book.poster_url %>" /> 
+        <% if book.photo.attached? %>
+          <%= cl_image_tag book.photo.key, crop: :fill %>
+        <% else %>
+          <img src="<%= book.poster_url %>" />
+        <% end %>
         <div class="card-trip-infos">
           <div class="infos">
             <h2><%= book.title %></h2>
             <p><%= book.author %></p>
           </div>
-          <%= link_to "More info", book_path(book), class: "btn btn-ghost" %>
+        <%= link_to "Info", book_path(book), class: "btn btn-secondary" %>
         </div>
       </div>
   <% end %>

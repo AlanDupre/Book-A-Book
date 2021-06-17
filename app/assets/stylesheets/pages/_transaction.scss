@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-around;
   padding: 15px;
-
 }
 
 .max-width {
@@ -14,4 +13,8 @@
 .transaction-card {
   max-width: 250px;
   max-height: 250px;
+}
+
+.product-text h1 {
+  text-align: center;
 }

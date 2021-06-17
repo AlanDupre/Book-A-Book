@@ -1,13 +1,34 @@
 <h1>DASHBOARD</h1>
+<div class="container disposition">
 
-<% @booking.each do |book| %>
-
-<div class="card-product">
-  <img src="<%= book.poster_url %>" />
-  <div class="card-product-infos">
-    <h2><%= book.title %></h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
+  <div>
+  <p>My Orders</p>
+    <%= render "/shared/dashboard_card", booking: @booking %>
   </div>
-</div>
 
-<% end %>
+  <% if @user.books.nil? %>
+      <span>You don't booking yet</span>
+   <% else %>
+
+  <div>
+  <p>My Books</p>
+    <% @user.books.each do |book| %>
+      <div class="card-product">
+      <% if book.photo.attached? %>
+        <%= cl_image_tag book.photo.key, crop: :fill %>
+      <% else %>
+        <img src="<%= book.poster_url %>" />
+      <% end %>
+
+        <div class="card-product-infos">
+          <p><%= book.title %></p>
+          <%= link_to "Edit", edit_book_path(book), class: "btn btn-ghost" %>
+          <%= link_to "Delete", book_path(book), method: :delete, class: "btn btn-ghost" %>
+          <%= link_to "View", book_path(book), class: "btn btn-ghost" %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
