@@ -8,7 +8,6 @@ class DashboardsController < ApplicationController
     @transactions.each do |transaction|
      @book << transaction.book_id
     end
-
     @booking = Book.where(id: @book)
   end
 end
