@@ -39,6 +39,7 @@ group :development, :test do
   gem 'pry-rails'
   # Cloudinary
   gem 'dotenv-rails', groups: [:development, :test]
+  gem 'cloudinary', '~> 1.16.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
