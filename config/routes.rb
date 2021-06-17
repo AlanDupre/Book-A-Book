@@ -9,4 +9,5 @@ Rails.application.routes.draw do
       patch  "/decline", to: "transactions#decline"
     end
   end
+  get "/dashboard", to: "dashboards#show"
 end
