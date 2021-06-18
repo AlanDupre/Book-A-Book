@@ -28,9 +28,9 @@
               <div class="card-product-infos">
                 <p><%= book.title %></p>
                 <div class="buttons">
-                  <%= link_to "Edit", edit_book_path(book), class: "btn btn-light" %>
-                  <%= link_to "Delete", book_path(book), method: :delete, class: "btn btn-light" %>
-                  <%= link_to "View", book_path(book), class: "btn btn-light" %>
+                  <%= link_to "View", book_path(book), class: "btn btn-ghost" %>
+                    <%= link_to "Edit", edit_book_path(book), class: "btn btn-ghost" %>
+                    <%= link_to "Delete", book_path(book), method: :delete, class: "btn btn-ghost" %>
                 </div>
               </div>
             </div>

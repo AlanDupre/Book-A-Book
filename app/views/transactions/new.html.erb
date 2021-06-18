@@ -2,7 +2,6 @@
 
 
 <div class="container">
-  
   <div class="wrapper">
     <div class="product-img">
       <img src="<%= @book.poster_url %>" height="420" width="327">
@@ -17,7 +16,8 @@
             <%= simple_form_for [@book, @transaction] do |f| %>
               <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-              <%= f.submit "Add", class: "btn btn-secondary" %>
+              <%= f.submit "Add", class: "btn btn-success" %>
+              <%= link_to "Back", book_path(@book), class: "btn btn-secondary" %>
             <% end %>
           </div>
           </div>
