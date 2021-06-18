@@ -31,7 +31,7 @@
     </div>
 
     <div class="row justify-content-center">
-      <%= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+      <%= f.input :photo, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
     </div>
 
     <div>
@@ -39,5 +39,4 @@
     </div>
   </div>
 <% end %>
-  
 
