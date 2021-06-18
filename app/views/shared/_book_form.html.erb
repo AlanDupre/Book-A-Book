@@ -1,6 +1,3 @@
-
-
-
 <%= simple_form_for @book do |f| %>
   <%# TITLE %>
   <div class="form-group">
@@ -34,10 +31,12 @@
     </div>
 
     <div class="row justify-content-center">
-      <%= f.input :photo, label: false, as: :file, input_html: {class: "form-control"} %>
+      <%= f.input :photo, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
     </div>
 
-    <%= f.submit "Ajoutez votre livre", class:"btn btn-success" %> 
+    <div>
+      <%= f.submit "Ajoutez votre livre", class:"btn btn-success" %> 
+    </div>
   </div>
 <% end %>
   
