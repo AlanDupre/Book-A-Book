@@ -33,6 +33,16 @@
 }
 
 .buttons {
+  display: flex;
   margin-top: 110px;
   margin-left: 200px;
+}
+
+.my_booking {
+  margin-right: 20px;
+}
+
+.new_book {
+  text-align: right;
+  margin-right: 200px;
 }

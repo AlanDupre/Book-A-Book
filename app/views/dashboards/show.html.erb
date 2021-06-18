@@ -1,36 +1,43 @@
-<h1>DASHBOARD</h1>
+
+
+  <div class="new_book">
+    <%= link_to "CREATE A BOOK", new_book_path, class: "btn btn-success" %>
+  </div>
+<h2 style="font-family: 'Times New Roman',sans-serif; font-size: 40px; font-weight: 200; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase;">DASHBOARD</h2>
+
 <div class="container disposition">
 
-  <div>
-  <p>My Orders</p>
+
+
+  <div class="my_booking">
+    <p style="font-family: 'Times New Roman'">My Orders</p>
     <%= render "/shared/dashboard_card", booking: @booking %>
   </div>
 
-  <% if @user.books.nil? %>
-      <span>You don't booking yet</span>
-   <% else %>
+    <% if @user.books.nil? %>
+          <span>You don't booking yet</span>
+    <% else %>
 
-  <div>
-  <p>My Books</p>
-    <% @user.books.each do |book| %>
-      <div class="card-product">
-      <% if book.photo.attached? %>
-        <%= cl_image_tag book.photo.key, crop: :fill %>
-      <% else %>
-        <img src="<%= book.poster_url %>" />
-      <% end %>
+      <div class="my_books">
+        <p style="font-family: 'Times New Roman'">My Books</p>
+          <% @user.books.each do |book| %>
+            <div class="card-product">
+              <% if book.photo.attached? %>
+                  <%= cl_image_tag book.photo.key, crop: :fill %>
+              <% else %>
+                  <img src="<%= book.poster_url %>" />
+              <% end %>
 
-        <div class="card-product-infos">
-          <p><%= book.title %></p>
-          <div class="buttons">
-            <%= link_to "Edit", edit_book_path(book), class: "btn btn-light" %>
-            <%= link_to "Delete", book_path(book), method: :delete, class: "btn btn-light" %>
-            <%= link_to "View", book_path(book), class: "btn btn-light" %>
-          </div>
-        </div>
-
-      </div>
+              <div class="card-product-infos">
+                <p><%= book.title %></p>
+                <div class="buttons">
+                  <%= link_to "Edit", edit_book_path(book), class: "btn btn-light" %>
+                  <%= link_to "Delete", book_path(book), method: :delete, class: "btn btn-light" %>
+                  <%= link_to "View", book_path(book), class: "btn btn-light" %>
+                </div>
+              </div>
+            </div>
     <% end %>
-  </div>
+      </div>
   <% end %>
 </div>

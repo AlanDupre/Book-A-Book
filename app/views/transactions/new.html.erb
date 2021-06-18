@@ -1,3 +1,6 @@
+<h1 style="font-family: 'Times New Roman',sans-serif; font-size: 40px; font-weight: 200; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase;">TIME TO BOOK YOUR BOOK</h1>
+
+
 <div class="container">
   
   <div class="wrapper">
@@ -9,12 +12,14 @@
         <h1><%= @book.title %></h1> 
         <h2>Author : <%= @book.author %></h2>
         <div class="container">
+         <div class="form-wrapper" style="width: 250px; margin: 0 auto;">
           <div class="transaction-form">
             <%= simple_form_for [@book, @transaction] do |f| %>
               <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
               <%= f.submit "Add", class: "btn btn-secondary" %>
             <% end %>
+          </div>
           </div>
         </div>
     </div>
