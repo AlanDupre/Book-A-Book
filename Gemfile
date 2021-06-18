@@ -39,7 +39,6 @@ group :development, :test do
   gem 'pry-rails'
   # Cloudinary
   gem 'dotenv-rails', groups: [:development, :test]
-  gem 'cloudinary', '~> 1.16.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -51,6 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'cloudinary', '~> 1.16.0'
 end
 
 group :test do
