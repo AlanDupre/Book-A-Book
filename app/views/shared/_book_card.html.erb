@@ -1,4 +1,4 @@
-<div class="index-card">
+<div class="container index-card">
   <% books.each do |book| %>
     <div class="card-trip">
       <% if book.photo.attached? %>
@@ -9,10 +9,10 @@
       <div class="card-trip-infos">
         <div class="infos">
           <h2><%= book.title %></h2>
-          <p><%= book.author %></p>
+           <p><%= book.author %></p>
+           <p><%= book.price %>€</p>
         </div>
-        <%= link_to "Info", book_path(book), class: "btn btn-secondary" %>
-        <h2 class="card-trip-pricing"> <%= book.price %></h2>
+        <%= link_to "Info", book_path(book), class:"btn btn-success" %>
       </div>
     </div>
   <% end %>
