@@ -4,7 +4,7 @@
   <div class="wrapper">
     <div class="product-img">
        <% if @book.photo.attached? %>
-        <%= cl_image_tag @book.photo.key, crop: :fill %>
+        <img src="<%= cl_image_tag @book.photo.key, crop: :fill %> height="420" width="327"" >
       <% else %>
         <img src="<%= @book.poster_url %>" height="420" width="327"/>
       <% end %>
