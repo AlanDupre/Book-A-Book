@@ -1,34 +1,29 @@
-.index-card {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .card-trip {
+  display: flex;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  flex: 1 0 21%; /* explanation below */
-  margin: 5px;
-  height: 500px;
-  background-color: white;
+  width: 400px;
 }
 
 .card-trip > img {
-  height: 400px;
+  height: 200px;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  text-align: center;
 }
 
 
@@ -44,13 +39,64 @@
   position: absolute;
   right: 16px;
   top: -20px;
-  width: 100%;
+  width: 40px;
 }
 
-.infos {
-  text-align: left;
-  margin-top: -25px;
+.index-card {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  justify-content: space-around;
 }
+
+// .card-trip {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   flex: 1 0 21%; /* explanation below */
+//   margin: 5px;
+//   height: 500px;
+//   background-color: white;
+// }
+
+// .card-trip > img {
+//   height: 400px;
+//   width: 100%;
+//   object-fit: contain;
+// }
+
+// .card-trip h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-trip p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
+
+
+// .card-trip .card-trip-infos {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
+
+// .card-trip-infos .card-trip-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 100%;
+// }
+
+// .infos {
+//   text-align: left;
+//   margin-top: -25px;
+// }
 
 // card pour la show
 .wrapper {
